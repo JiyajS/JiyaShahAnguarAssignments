@@ -3,5 +3,5 @@ export interface User {
   name: string;
   email: string;
   contacts: number;
-  city: string;
+  Admin: boolean;
 }
