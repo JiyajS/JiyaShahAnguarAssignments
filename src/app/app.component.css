@@ -6,9 +6,12 @@
   background-color: lightblue;
 }
 
-h2 {
-  text-align: center;
+li {
+  font: 25px "Times New Roman", Times, serif;
   color: royalblue;
+}
+h1{
+  text-align:left;
 }
 
 
