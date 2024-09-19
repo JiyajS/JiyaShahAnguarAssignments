@@ -1,0 +1,48 @@
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: lightblue;
+}
+
+li {
+  font: 25px "Times New Roman", Times, serif;
+  color: royalblue;
+}
+h1{
+  text-align:left;
+}
+
+
+.user-card {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-card h3 {
+  font-size: 18px;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.user-card p {
+  font-size: 14px;
+  color: black;
+  margin: 5px 0;
+}
+
+/* Button styling */
+.login-button {
+  background-color: bisque;
+  color: darkblue;
+  padding: 8px 12px;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+
+
+
