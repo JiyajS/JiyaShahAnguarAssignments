@@ -1,13 +1,13 @@
 {
   "name": "jiya-shah-learning-Angular",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "generateInterface": "“ng generate interface"
+    "generateInterface": "ng generate interface"
 
   },
   "private": true,
