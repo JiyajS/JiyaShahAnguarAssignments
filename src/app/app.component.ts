@@ -12,6 +12,7 @@ import {JsonPipe,NgForOf} from '@angular/common';
 })
 export class AppComponent {
   title = 'User Generation';
+
   fname: string = 'Jiya';
   lname: string ='Shah';
 
@@ -27,10 +28,6 @@ export class AppComponent {
   Login(user:User):void {
     user.Admin = !user.Admin;
   }
-
-
-
-
 
 
 }
