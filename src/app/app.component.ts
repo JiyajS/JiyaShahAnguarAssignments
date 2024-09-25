@@ -12,7 +12,7 @@ import {UserInformationComponent} from "./user-information/user-information.comp
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'User Generation';
+  title = 'Banking System';
 
   // fname: string = 'Jiya';
   // lname: string ='Shah';
