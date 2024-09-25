@@ -29,10 +29,10 @@ export class UserInformationComponent {
 
 
 
-selectUser?: User;
+selectedUser?: User;
 
-selectedUser(user: User):void {
-  this.selectUser = user;
+selectUser(user: User):void {
+  this.selectedUser = user;
 }
 
 }

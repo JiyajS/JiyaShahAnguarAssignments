@@ -1,23 +1,8 @@
-
-<div class="container">
-  <h1>Banking System</h1>
-  <h2>Login Information Of Users</h2>
-  <div *ngFor = "let user of users" class="user-card">
-    <h3>{{user.id}}) {{user.name}}</h3>
-    <p>Email: {{user.email}}</p>
-    <p>Contact: {{user.contacts}}</p>
-    <p>Is Admin? {{user.Admin ? 'Yes' : 'No'}}</p>
-    <button (click) = "Login(user)" class="login-button">
-      Login
-    </button>
-
-  </div>
-  <div *ngIf = "users == 0" >
-    <p>The user is not found</p>
-  </div>
+<div *ngIf="users" class="user-list">
+  <h2>Student Details</h2>
+  <p><strong>ID:</strong> {{ users.id }}</p>
+  <p><strong>First Name:</strong> {{ users.name }}</p>
+  <p><strong>Last Name:</strong> {{ users.email }}</p>
+  <p><strong>Department:</strong> {{ users.contacts }}</p>
+  <p><strong>Admin:</strong> {{ users.Admin ? 'Yes' : 'No' }}</p>
 </div>
-<div>
-  <user-information></user-information>
-</div>
-
-
