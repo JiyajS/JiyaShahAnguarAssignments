@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import {NgForOf} from "@angular/common";
 import {User} from "../Shared/Modules/user";
+import {UserInformationListComponent} from "../user-information-list/user-information-list.component";
 
 @Component({
   selector: 'app-user-information',
   standalone: true,
   imports: [
-    NgForOf
+    NgForOf,
+    UserInformationListComponent
   ],
   templateUrl: './user-information.component.html',
   styleUrl: './user-information.component.css'
@@ -24,13 +26,13 @@ export class UserInformationComponent {
     { id: 6, name: 'Chaula', email: 'c@gmail.com', contacts: 6565466, Admin:true }
   ];
 
-  Login(user:User):void {
-    user.Admin = !user.Admin;
-  }
 
 
 
+selectUser?: User;
 
-
+selectedUser(user: User):void {
+  this.selectUser = user;
+}
 
 }
