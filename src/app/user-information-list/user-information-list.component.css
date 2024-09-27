@@ -1,0 +1,45 @@
+/* User list container */
+.user-list {
+  background-color: #e3f2fd; /* Light blue background */
+  padding: 25px; /* More padding for a spacious layout */
+  border: 1px solid #64b5f6; /* Blue border */
+  border-radius: 15px; /* Larger rounded corners for a softer look */
+  width: 320px; /* Adjusted width */
+  margin: 30px auto; /* Center and add more margin */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Add a stronger box shadow for depth */
+  transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+/* Header styling */
+.user-list h2 {
+  font-size: 22px; /* Slightly smaller font */
+  margin-bottom: 15px;
+  color: #1e88e5; /* Darker blue for the heading */
+  text-transform: uppercase; /* Make the header text uppercase for emphasis */
+  letter-spacing: 1px; /* Add letter spacing for a modern look */
+}
+
+/* Paragraph styling */
+.user-list p {
+  font-size: 14px; /* Smaller font size for compact look */
+  margin: 8px 0; /* More spacing between lines */
+  color: #37474f; /* Dark grey text color */
+}
+
+/* Styling for strong elements */
+.user-list p strong {
+  color: #0d47a1; /* Deep blue color for labels */
+  font-weight: 600; /* Bolder font for emphasis */
+}
+
+/* Last paragraph spacing */
+.user-list p:last-child {
+  margin-bottom: 0; /* No margin for the last paragraph */
+}
+
+/* Hover effect for the container */
+.user-list:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  transform: scale(1.05); /* Slight scaling effect on hover */
+  border-color: #1976d2; /* Darker border color on hover */
+}

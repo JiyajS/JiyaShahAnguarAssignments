@@ -1,0 +1,51 @@
+/* General Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+thead th {
+  background-color: #283593; /* Deep purple background for header */
+  color: white; /* White text for header */
+  text-align: left;
+  padding: 12px;
+  font-size: 16px;
+  border-bottom: 3px solid #1a237e; /* Darker border for header */
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd; /* Subtle line separating each row */
+  font-size: 14px;
+  color: #333; /* Darker text color */
+}
+
+/* Zebra stripe effect for rows */
+tbody tr:nth-child(even) {
+  background-color: #f3f4f6; /* Light grey background for even rows */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* White background for odd rows */
+}
+
+/* Hover Effect */
+.user-row:hover {
+  background-color: #c5cae9; /* Light blue background on hover */
+  color: #1a237e; /* Darker text color on hover */
+  cursor: pointer;
+}
+
+/* Transition for smooth hover effect */
+.user-row {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Optional: Highlight for selected row */
+.selected {
+  background-color: #b3e5fc; /* Light blue highlight for selected row */
+  border-left: 4px solid #0288d1; /* Add a border to emphasize selection */
+}
