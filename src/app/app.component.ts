@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {User} from './Shared/Modules/user';
+import {Operator} from './Shared/Modules/operator';
 import {JsonPipe,NgForOf} from '@angular/common';
 import {UserInformationComponent} from "./user-information/user-information.component";
 
@@ -17,7 +17,7 @@ export class AppComponent {
   // fname: string = 'Jiya';
   // lname: string ='Shah';
   //
-  // users: User[] = [
+  // users: Operator[] = [
   //   { id: 1, name: 'Jiya Shah', email: 'jiyajshah25@gmail.com', contacts: 456456, Admin:true },
   //   { id: 2, name: 'Javal Patel', email: 'javalptl@gmail.com', contacts: 54645, Admin: true },
   //   { id: 3, name: 'Manasvi Patel', email: 'm@gmail.com', contacts: 123123, Admin: false },
@@ -26,7 +26,7 @@ export class AppComponent {
   //   { id: 6, name: 'Chaula', email: 'c@gmail.com', contacts: 6565466, Admin:true }
   // ];
   //
-  // Login(user:User):void {
+  // Login(user:Operator):void {
   //   user.Admin = !user.Admin;
   // }
 

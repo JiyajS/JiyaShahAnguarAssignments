@@ -12,15 +12,15 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let user of users" (click)="selectUser(user)">
-      <td>{{ user.id }}</td>
-      <td>{{ user.name }}</td>
-      <td>{{ user.email }}</td>
-      <td>{{ user.contacts }}</td>
-      <td>{{ user.Admin ? 'Yes' : 'No' }}</td>
+    <tr *ngFor="let person of login" (click)="selectUser(person)">
+      <td>{{ person.id }}</td>
+      <td>{{ person.name }}</td>
+      <td>{{ person.email }}</td>
+      <td>{{ person.contacts }}</td>
+      <td>{{ person.Admin ? 'Yes' : 'No' }}</td>
     </tr>
     </tbody>
   </table>
 
-  <app-user-information-list [users]="selectedUser"></app-user-information-list>
+  <app-user-information-list [login]="selectedUser"></app-user-information-list>
 </div>

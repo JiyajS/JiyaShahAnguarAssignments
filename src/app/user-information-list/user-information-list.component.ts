@@ -1,6 +1,6 @@
 import {NgForOf, NgIf} from '@angular/common';
 import { Component, Input} from '@angular/core';
-import { User } from '../Shared/Modules/user';
+import { Operator } from '../Shared/Modules/operator';
 @Component({
   selector: 'app-user-information-list',
   standalone: true,
@@ -9,5 +9,5 @@ import { User } from '../Shared/Modules/user';
   styleUrl: './user-information-list.component.css'
 })
 export class UserInformationListComponent {
-  @Input() users?:User;
+  @Input() login?:Operator;
 }

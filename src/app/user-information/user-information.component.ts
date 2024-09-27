@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import {NgForOf} from "@angular/common";
-import {User} from "../Shared/Modules/user";
+import {Operator} from "../Shared/Modules/operator";
 import {UserInformationListComponent} from "../user-information-list/user-information-list.component";
+import {operate} from "rxjs/internal/util/lift";
 
 @Component({
   selector: 'app-user-information',
@@ -17,7 +18,7 @@ export class UserInformationComponent {
   fname: string = 'Jiya';
   lname: string ='Shah';
 
-  users: User[] = [
+  login: Operator[] = [
     { id: 1, name: 'Jiya Shah', email: 'jiyajshah25@gmail.com', contacts: 456456, Admin:true },
     { id: 2, name: 'Javal Patel', email: 'javalptl@gmail.com', contacts: 54645, Admin: true },
     { id: 3, name: 'Manasvi Patel', email: 'm@gmail.com', contacts: 123123, Admin: false },
@@ -29,10 +30,11 @@ export class UserInformationComponent {
 
 
 
-selectedUser?: User;
+selectedUser?: Operator;
 
-selectUser(user: User):void {
+selectUser(user: Operator):void {
   this.selectedUser = user;
 }
 
+  protected readonly operate = operate;
 }
