@@ -1,34 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {Operator} from './Shared/Modules/operator';
-import {JsonPipe,NgForOf} from '@angular/common';
-import {UserInformationComponent} from "./user-information/user-information.component";
+import { JsonPipe, NgForOf } from '@angular/common';
+import { UserInformationComponent } from "./user-information/user-information.component";
+import { OnlineBankingService } from "./online-banking.service";
+import { Operator } from './Shared/Modules/operator';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,JsonPipe,NgForOf,UserInformationComponent],
+  imports: [RouterOutlet, JsonPipe, NgForOf, UserInformationComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Banking System';
+  topUser: Operator | undefined;  // Define a variable to store the user data
 
-  // fname: string = 'Jiya';
-  // lname: string ='Shah';
-  //
-  // users: Operator[] = [
-  //   { id: 1, name: 'Jiya Shah', email: 'jiyajshah25@gmail.com', contacts: 456456, Admin:true },
-  //   { id: 2, name: 'Javal Patel', email: 'javalptl@gmail.com', contacts: 54645, Admin: true },
-  //   { id: 3, name: 'Manasvi Patel', email: 'm@gmail.com', contacts: 123123, Admin: false },
-  //   { id: 4, name: 'Sakshi', email: 's@gmail.com', contacts: 5645484, Admin:false },
-  //   { id: 5, name: 'Parimal', email: 'p@gmail.com', contacts: 8528787, Admin:false },
-  //   { id: 6, name: 'Chaula', email: 'c@gmail.com', contacts: 6565466, Admin:true }
-  // ];
-  //
-  // Login(user:Operator):void {
-  //   user.Admin = !user.Admin;
-  // }
+  constructor(private onlineBanking: OnlineBankingService) { }
 
-
+  ngOnInit(): void {
+    // Call the service to get the user with ID 1
+    this.onlineBanking.getUserById(1).subscribe((data: Operator | undefined) => {
+      this.topUser = data;  // Store the retrieved user data
+    });
+  }
 }
