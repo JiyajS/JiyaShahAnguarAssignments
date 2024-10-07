@@ -8,6 +8,7 @@ import {ModifyListItemComponent} from "./app/modify-list-item/modify-list-item.c
 
 
 const routes: Routes = [
+  {path:'', redirectTo: '/students', pathMatch: 'full'},
   { path: 'user', component: UserInformationComponent },
   { path: 'users/:Id', component: UserInformationComponent },
   {path: 'modifyListItem', component: ModifyListItemComponent},

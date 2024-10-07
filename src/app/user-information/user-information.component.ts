@@ -4,6 +4,7 @@ import {Operator} from "../Shared/Modules/operator";
 import {UserInformationListComponent} from "../user-information-list/user-information-list.component";
 import {operate} from "rxjs/internal/util/lift";
 import {OnlineBankingService} from "../online-banking.service";
+import {RouterLink} from "@angular/router";
 
 
 @Component({
@@ -11,7 +12,8 @@ import {OnlineBankingService} from "../online-banking.service";
   standalone: true,
   imports: [
     NgForOf,
-    UserInformationListComponent
+    UserInformationListComponent,
+    RouterLink
   ],
   templateUrl: './user-information.component.html',
   styleUrl: './user-information.component.css'

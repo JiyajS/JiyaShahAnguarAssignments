@@ -12,7 +12,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let person of login" (click)="selectUser(person)">
+    <tr *ngFor="let person of login" [routerLink]="['/user',person.id]" >
       <td>{{ person.id }}</td>
       <td>{{ person.name }}</td>
       <td>{{ person.email }}</td>
@@ -22,5 +22,4 @@
     </tbody>
   </table>
 
-  <app-user-information-list [login]="selectedUser"></app-user-information-list>
 </div>
