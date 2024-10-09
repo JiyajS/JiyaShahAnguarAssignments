@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'user', component: UserInformationComponent },
   { path: 'users/:Id', component: UserInformationComponent },
   {path: 'modifyListItem', component: ModifyListItemComponent},
-  {path: 'pageNotFound', component: PageNotFoundComponent}
+  {path: '**', component: PageNotFoundComponent}
 ]
 
 bootstrapApplication(AppComponent, {
