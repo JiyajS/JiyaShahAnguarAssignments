@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+
 import {NgForOf} from "@angular/common";
 import {Operator} from "../Shared/Modules/operator";
 import {UserInformationListComponent} from "../user-information-list/user-information-list.component";
@@ -17,9 +18,7 @@ import {OnlineBankingService} from "../online-banking.service";
   styleUrl: './user-information.component.css'
 })
 export class UserInformationComponent implements OnInit{
-  fname: string = 'Jiya';
-  lname: string ='Shah';
-
+  // Colums:string=['id','name','email','contacts','Admin'];
   login: Operator[] = [];
 constructor(private OnlineBanking : OnlineBankingService ) {
 }
@@ -36,5 +35,4 @@ selectUser(user: Operator):void {
   this.selectedUser = user;
 }
 
-  protected readonly operate = operate;
 }

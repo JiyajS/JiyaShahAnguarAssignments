@@ -3,7 +3,6 @@ import {login} from "./Shared/userChanges.data";
 import {Observable, of} from 'rxjs';
 // @ts-ignore
 import {Operator} from "../Shared/Modules/operator"
-import {operate} from "rxjs/internal/util/lift";
 
 @Injectable({
   providedIn: 'root'

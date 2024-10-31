@@ -43,3 +43,18 @@
   transform: scale(1.05); /* Slight scaling effect on hover */
   border-color: #1976d2; /* Darker border color on hover */
 }
+.even-item {
+  background-color: pink;
+}
+
+.odd-item {
+  background-color: teal;
+}
+
+.item-container {
+  padding: 15px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+

@@ -1,8 +1,12 @@
 <div *ngIf="login" class="user-list">
   <h2>Operator Login Details</h2>
+<!--  <img src="src/app/images/picture.jpg" alt="{{login.id}}">-->
   <p><strong>ID:</strong> {{ login.id }}</p>
   <p><strong>First Name:</strong> {{ login.name }}</p>
   <p><strong>Email:</strong> {{ login.email }}</p> <!-- Changed label to "Email" -->
   <p><strong>Contacts:</strong> {{ login.contacts }}</p> <!-- Changed label to "Contacts" -->
   <p><strong>Admin:</strong> {{ login.Admin ? 'Yes' : 'No' }}</p>
 </div>
+
+
+
