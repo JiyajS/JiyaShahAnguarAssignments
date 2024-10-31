@@ -42,6 +42,11 @@ export class OnlineBankingService {
     const user = this.users.find(user => user.id === studentId);
     return of(user);
   }
+  generateNewId(): number{
+    return this.users.length > 0 ? Math.max(...this.users.map(user => user.id)) + 1 : 1;
+  }
+
+
 }
 
 

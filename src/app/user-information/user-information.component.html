@@ -1,5 +1,4 @@
 <div>
-
   <h2>Login Information Of Users</h2>
   <table>
     <thead>
@@ -12,7 +11,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let person of login" [routerLink]="['/user',person.id]" >
+    <tr *ngFor="let person of login" [routerLink]="['/user', person.id]">
       <td>{{ person.id }}</td>
       <td>{{ person.name }}</td>
       <td>{{ person.email }}</td>
@@ -21,5 +20,4 @@
     </tr>
     </tbody>
   </table>
-
 </div>
