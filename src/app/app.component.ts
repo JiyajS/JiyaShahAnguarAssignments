@@ -12,16 +12,7 @@ import { Operator } from './Shared/Modules/operator';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent  {
   title = 'Banking System';
-  topUser: Operator | undefined;  // Define a variable to store the user data
 
-  constructor(private onlineBanking: OnlineBankingService) { }
-
-  ngOnInit(): void {
-    // Call the service to get the user with ID 1
-    this.onlineBanking.getUserById(1).subscribe((data: Operator | undefined) => {
-      this.topUser = data;  // Store the retrieved user data
-    });
-  }
 }
