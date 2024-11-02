@@ -1,15 +1,8 @@
 <div>
   <h2>Login Information Of Users</h2>
-  <table>
-    <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Contacts</th>
-      <th>Admin</th>
-    </tr>
-    </thead>
+
+
+
     <tbody>
     <tr *ngFor="let person of login" [routerLink]="['/user', person.id]">
       <td>{{ person.id }}</td>
@@ -19,5 +12,5 @@
       <td>{{ person.Admin ? 'Yes' : 'No' }}</td>
     </tr>
     </tbody>
-  </table>
+
 </div>

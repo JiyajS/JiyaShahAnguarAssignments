@@ -1,18 +1,90 @@
-.user-list {
-  list-style-type: none; /* Remove default bullet points */
-  padding: 0; /* Remove default padding */
-  margin: 20px 0; /* Add some margin */
+/* General form styling */
+form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.user-item {
-  padding: 10px; /* Add padding around list items */
-  background-color: #f3f4f6; /* Light grey background for list items */
-  border: 1px solid #ddd; /* Border around items */
-  margin-bottom: 10px; /* Space between list items */
-  transition: background-color 0.3s ease; /* Smooth transition for hover */
+/* Styling form groups */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
-.user-item:hover {
-  background-color: #c5cae9; /* Light blue background on hover */
-  cursor: pointer; /* Change cursor on hover */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="checkbox"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+/* Styling for the checkbox */
+input[type="checkbox"] {
+  width: auto;
+  margin-top: 5px;
+}
+
+/* Hover and focus effects for inputs */
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #66afe9;
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+}
+
+/* Styling buttons */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Primary Submit Button */
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Delete Button */
+button[type="button"] {
+  background-color: #f44336;
+  color: white;
+  margin-left: 10px;
+}
+
+button[type="button"]:hover {
+  background-color: #e53935;
+}
+
+/* Back Button */
+button + button {
+  background-color: #007bff;
+  color: white;
+  margin-left: 10px;
+}
+
+button + button:hover {
+  background-color: #0056b3;
 }

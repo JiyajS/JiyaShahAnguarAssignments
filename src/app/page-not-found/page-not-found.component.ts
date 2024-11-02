@@ -11,7 +11,9 @@ import {Router} from "@angular/router";
 export class PageNotFoundComponent {
   constructor(private router: Router) {}
 
-  navigateToHome() {
-    this.router.navigate(['/']); // Navigate to the home page
+  navigateToUserList(): void {
+    console.log('Navigating to user list...');
+    this.router.navigate(['/users']);
   }
+
 }
