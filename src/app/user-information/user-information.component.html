@@ -3,7 +3,7 @@
 
 
 
-    <tbody>
+
     <tr *ngFor="let person of login" [routerLink]="['/user', person.id]">
       <td>{{ person.id }}</td>
       <td>{{ person.name }}</td>
@@ -11,6 +11,6 @@
       <td>{{ person.contacts }}</td>
       <td>{{ person.Admin ? 'Yes' : 'No' }}</td>
     </tr>
-    </tbody>
+
 
 </div>
