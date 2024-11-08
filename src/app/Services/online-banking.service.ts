@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {login} from "./Shared/userChanges.data";
+import {login} from "../Shared/userChanges.data";
 import {Observable, of} from 'rxjs';
 // @ts-ignore
 import {Operator} from "../Shared/Modules/operator"

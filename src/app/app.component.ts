@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {RouterLinkActive, RouterOutlet} from '@angular/router';
 import { JsonPipe, NgForOf } from '@angular/common';
 import { UserInformationComponent } from "./user-information/user-information.component";
-import { OnlineBankingService } from "./online-banking.service";
+import { OnlineBankingService } from "./Services/online-banking.service";
 import { Operator } from './Shared/Modules/operator';
 import {Router,RouterModule} from "@angular/router";
 @Component({

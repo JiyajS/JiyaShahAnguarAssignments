@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Operator } from "../Shared/Modules/operator";
-import { OnlineBankingService } from "../online-banking.service";
+import { OnlineBankingService } from "../Services/online-banking.service";
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
 import { NgIf } from "@angular/common";

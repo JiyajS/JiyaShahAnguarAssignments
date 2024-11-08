@@ -3,7 +3,7 @@ import { NgForOf } from "@angular/common";
 import { Operator } from "../Shared/Modules/operator";
 import { UserInformationListComponent } from "../user-information-list/user-information-list.component";
 import {Router, RouterLink} from "@angular/router";
-import {OnlineBankingService} from "../online-banking.service";
+import {OnlineBankingService} from "../Services/online-banking.service";
 import {login} from "../Shared/userChanges.data";
 
 @Component({
