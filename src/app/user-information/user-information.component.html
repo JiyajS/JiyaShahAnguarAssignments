@@ -1,16 +1,13 @@
-<div>
-  <h2>Login Information Of Users</h2>
-
-
-
-
-    <tr *ngFor="let person of login" [routerLink]="['/user', person.id]">
-      <td>{{ person.id }}</td>
-      <td>{{ person.name }}</td>
-      <td>{{ person.email }}</td>
-      <td>{{ person.contacts }}</td>
-      <td>{{ person.Admin ? 'Yes' : 'No' }}</td>
-    </tr>
-
-
+<div *ngFor="let person of login" class="person-container">
+  <div class="person-field"><strong>ID:</strong> {{ person.id }}</div>
+  <div class="person-field"><strong>Name:</strong> {{ person.name }}</div>
+  <div class="person-field"><strong>Email:</strong> {{ person.email }}</div>
+  <div class="person-field"><strong>Contacts:</strong> {{ person.contacts }}</div>
+  <div class="person-field"><strong>Admin:</strong> {{ person.Admin ? 'Yes' : 'No' }}</div>
+  <div class="actions">
+    <!-- Navigate to edit user page -->
+    <button (click)="onEdit(person.id)">Edit</button>
+    <!-- Delete user -->
+    <button (click)="onDelete(person.id)">Delete</button>
+  </div>
 </div>

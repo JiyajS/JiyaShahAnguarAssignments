@@ -14,7 +14,7 @@ import { NgIf } from "@angular/common";
 })
 export class ModifyListItemComponent implements OnInit {
   userForm: FormGroup;
-  user: Operator | undefined;
+  user: Operator[] = [] ;
 
   constructor(
     private fb: FormBuilder,
@@ -24,45 +24,48 @@ export class ModifyListItemComponent implements OnInit {
   ) {
     this.userForm = this.fb.group({
       id: ['', Validators.required],
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      department: [''],
+      name: ['', Validators.required],
+      email: ['', Validators.required],
+      contacts: ['',Validators.required],
       isAdmin: [false]
     });
   }
 
   ngOnInit(): void {
+
+    // this.userService.getUser().subscribe(user => {
+    //   this.user =user;
+    // });
     const id = this.route.snapshot.paramMap.get('id');
     if (id && !isNaN(+id)) {
       this.userService.getUserById(+id).subscribe(user => {
         if (user) {
-          this.user = user;
-          this.userForm.patchValue(user);
+          this.userForm.patchValue(user); // Patch the form directly
         }
       });
     }
-  }
-  onSubmit():void{
-    const user1: Operator = this.userForm.value;
 
-    if(user1.id){
-      this.userService.updateUser(user1);
-    }else{
-      const newId = this.userService.generateNewId();
-      user1.id = newId;
-      this.userService.addUser(user1);
+  }
+  onSubmit(): void {
+    const updateUser = this.userForm?.value;
+
+    if (updateUser.id) {
+      // Add a subscription here
+      this.userService.updateUser(updateUser);
+    } else {
+      const newUser = this.userService.generateNewId();
+      updateUser.id = newUser;
+      this.userService.addUser(updateUser);
+
     }
     this.router.navigate(['/users']);
   }
-  onDelete():void{
-    const id = this.userForm.get('id')?.value;
-    if(id){
-      this.userService.deleteUser(id);
-      this.router.navigate(['/users']);
-    }
-  }
+
+
+
   navigateToUserList():void{
     this.router.navigate(['/users']);
   }
+
 
 }

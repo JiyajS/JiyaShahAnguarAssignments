@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { NgForOf } from "@angular/common";
 import { Operator } from "../Shared/Modules/operator";
 import { UserInformationListComponent } from "../user-information-list/user-information-list.component";
-import { OnlineBankingService } from "../online-banking.service";
 import {Router, RouterLink} from "@angular/router";
+import {OnlineBankingService} from "../online-banking.service";
+import {login} from "../Shared/userChanges.data";
 
 @Component({
   selector: 'app-user-information',
@@ -38,8 +39,21 @@ export class UserInformationComponent implements OnInit {
   selectUser(user: Operator): void {
     this.selectedUser = user;
   }
-
-  navigateToDetail(id: number) {
-    this.router.navigate([`/list-item`, id]); // Corrected to use the Router instance for navigation
+getUser():void{
+    this.onlineBanking.getUser().subscribe((login)=>{
+      this.login = login;
+    })
+}
+  navigateToEditUser(): void {
+    this.router.navigate(['/modifyListItem']);
   }
+
+  onDelete(id:number):void{
+    this.onlineBanking.deleteUser(id)
+    this.login = this.login.filter(user => user.id !== id);
+  }
+  onEdit(id: number | undefined): void {
+    this.router.navigate(['/modifyListItem', id]);
+  }
+
 }
