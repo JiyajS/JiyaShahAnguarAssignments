@@ -1,0 +1,62 @@
+/* Container Styling */
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  text-align: center;
+  padding: 2rem;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styling */
+.not-found h1 {
+  font-size: 3rem;
+  color: #ff4a4a;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* Paragraph Styling */
+.not-found p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Button Styling */
+.not-found button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover Effect */
+.not-found button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .not-found h1 {
+    font-size: 2.5rem;
+  }
+
+  .not-found p {
+    font-size: 1rem;
+  }
+
+  .not-found button {
+    width: 100%;
+    padding: 1rem;
+  }
+}
