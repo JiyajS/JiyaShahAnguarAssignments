@@ -11,4 +11,6 @@ import { NgOptimizedImage } from '@angular/common'
 })
 export class UserInformationListComponent {
   @Input() login?:Operator;
+  @Input() OnEdit?:(id: number) => void;
+  @Input() OnDelete?: (id: number) => void;
 }

@@ -5,7 +5,11 @@ import {provideRouter,Routes} from '@angular/router';
 import {PageNotFoundComponent} from "./app/page-not-found/page-not-found.component";
 import {ModifyListItemComponent} from "./app/modify-list-item/modify-list-item.component";
 import {UserInformationListComponent} from "./app/user-information-list/user-information-list.component";
-
+import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
+import {InMemoryDataServiceService} from "./app/in-memory-data-service.service";
+import {provideHttpClient} from "@angular/common/http";
+import {importProvidersFrom} from "@angular/core";
+import {delay} from "rxjs";
 
 
 const routes: Routes = [
@@ -19,5 +23,9 @@ const routes: Routes = [
 ]
 
 bootstrapApplication(AppComponent, {
-  providers: [provideRouter(routes)]
-})
+  providers: [
+    provideHttpClient(),
+    provideRouter(routes),
+    importProvidersFrom(HttpClientInMemoryWebApiModule.forRoot(InMemoryDataServiceService, {delay:1000}))
+  ],
+}).catch((err) => console.error(err))
