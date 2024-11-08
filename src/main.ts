@@ -14,7 +14,8 @@ const routes: Routes = [
   {path: 'users/:Id', component: UserInformationListComponent },
   {path: 'modifyListItem', component: ModifyListItemComponent},
   {path: 'modifyListItem/:id', component: ModifyListItemComponent},
-  {path: '**', component: PageNotFoundComponent}
+  {path: '**', component: PageNotFoundComponent},
+  { path: '', redirectTo: '/users', pathMatch: 'full' }
 ]
 
 bootstrapApplication(AppComponent, {

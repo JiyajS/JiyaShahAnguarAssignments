@@ -52,8 +52,13 @@ getUser():void{
     this.onlineBanking.deleteUser(id)
     this.login = this.login.filter(user => user.id !== id);
   }
-  onEdit(id: number | undefined): void {
+  // onEdit(id: number | undefined): void {
+  //   this.router.navigate(['/modifyListItem', id]);
+  // }
+
+  onEdit(id: number): void {
     this.router.navigate(['/modifyListItem', id]);
   }
+
 
 }

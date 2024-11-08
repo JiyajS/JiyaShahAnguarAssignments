@@ -1,37 +1,29 @@
-<!-- modify-user.component.html -->
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
-  <!-- ID Field -->
   <div class="form-group">
     <label for="id">ID</label>
     <input type="number" id="id" formControlName="id" />
   </div>
 
-  <!-- First Name Field -->
   <div class="form-group">
-    <label for="firstName">Name</label>
-    <input type="text" id="firstName" formControlName="firstName" />
+    <label for="name">Name</label>
+    <input type="text" id="name" formControlName="name" />
   </div>
 
-  <!-- Last Name Field -->
   <div class="form-group">
-    <label for="lastName">Email</label>
-    <input type="text" id="lastName" formControlName="lastName" />
+    <label for="email">Email</label>
+    <input type="email" id="email" formControlName="email" />
   </div>
 
-  <!-- Department Field -->
   <div class="form-group">
-    <label for="department">Contact</label>
-    <input type="text" id="department" formControlName="department" />
+    <label for="contacts">Contacts</label>
+    <input type="text" id="contacts" formControlName="contacts" />
   </div>
 
-  <!-- Is Admin Checkbox -->
   <div class="form-group">
     <label for="isAdmin">Admin</label>
     <input type="checkbox" id="isAdmin" formControlName="isAdmin" />
   </div>
 
-  <!-- Submit Button (Add or Update) -->
   <button type="submit">Submit</button>
-  <!-- Back Button -->
   <button type="button" (click)="navigateToUserList()">Back to List</button>
 </form>

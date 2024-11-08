@@ -20,26 +20,43 @@ export class OnlineBankingService {
   }
 
   //Crud methods
-  addUser(newUser: Operator): Observable<Operator[]> {
-    this.users.push(newUser);
-    return of(this.users);
-  }
+  // addUser(newUser: Operator): Observable<Operator[]> {
+  //   this.users.push(newUser);
+  //   return of(this.users);
+  // }
 
-  updateUser(updateUser: Operator): Observable<Operator[]> {
-    const index = this.users.findIndex(user => user.id === updateUser.id);
-    if(index !== -1) {
-      this.users[index] = updateUser;
+  // updateUser(updateUser: Operator): Observable<Operator[]> {
+  //   const index = this.users.findIndex(user => user.id === updateUser.id);
+  //   if(index !== -1) {
+  //     this.users[index] = updateUser;
+  //   }
+  //   return of(this.users);
+  // }
+
+  updateUser(user: Operator): Observable<Operator> {
+    const index = this.users.findIndex(u => u.id === user.id);
+    if (index !== -1) {
+      this.users[index] = user;
+      console.log("User updated:", user);
     }
+    return of(user); // Return an observable with the updated user
+  }
+
+  addUser(user: Operator): Observable<Operator> {
+    this.users.push(user);
+    console.log("User added:", user);
+    return of(user); // Return an observable with the new user
+  }
+
+
+
+  deleteUser(id: number): Observable<Operator[]> {
+    this.users = this.users.filter(user => user.id !== id);
     return of(this.users);
   }
 
-  deleteUser(studentId: number): Observable<Operator[]> {
-    this.users = this.users.filter(user => user.id !== studentId);
-    return of(this.users);
-  }
-
-  getUserById(studentId: number): Observable<Operator | undefined> {
-    const user = this.users.find(user => user.id === studentId);
+  getUserById(id: number): Observable<Operator | undefined> {
+    const user = this.users.find(user => user.id === id);
     return of(user);
   }
   generateNewId(): number{

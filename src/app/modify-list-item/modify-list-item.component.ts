@@ -26,7 +26,7 @@ export class ModifyListItemComponent implements OnInit {
       id: ['', Validators.required],
       name: ['', Validators.required],
       email: ['', Validators.required],
-      contacts: ['',Validators.required],
+      contacts: [''],
       isAdmin: [false]
     });
   }
@@ -40,26 +40,60 @@ export class ModifyListItemComponent implements OnInit {
     if (id && !isNaN(+id)) {
       this.userService.getUserById(+id).subscribe(user => {
         if (user) {
+          this.user = user;
           this.userForm.patchValue(user); // Patch the form directly
         }
       });
     }
 
   }
+  // onSubmit(): void {
+  //   const updateUser = this.userForm.value;
+  //
+  //   if (updateUser.id) {
+  //     // Add a subscription here
+  //     this.userService.updateUser(updateUser);
+  //   } else {
+  //     // const newUser = this.userService.generateNewId();
+  //     // updateUser.id = newUser;
+  //     this.userService.addUser(updateUser);
+  //
+  //   }
+  //   this.router.navigate(['/users']);
+  // }
+
   onSubmit(): void {
-    const updateUser = this.userForm?.value;
-
-    if (updateUser.id) {
-      // Add a subscription here
-      this.userService.updateUser(updateUser);
-    } else {
-      const newUser = this.userService.generateNewId();
-      updateUser.id = newUser;
-      this.userService.addUser(updateUser);
-
+    if (this.userForm.invalid) {
+      alert("Please fill out all required fields.");
+      return;
     }
-    this.router.navigate(['/users']);
+
+    const updatedUser = this.userForm.value;
+
+    if (updatedUser.id) {
+      // Update existing user
+      this.userService.updateUser(updatedUser).subscribe({
+        next: () => {
+          console.log("User updated successfully!");
+          this.router.navigate(['/users']);
+        },
+        error: (err) => console.error("Error updating user:", err)
+      });
+    } else {
+      // Add new user if no ID is provided
+      updatedUser.id = this.userService.generateNewId();
+      this.userService.addUser(updatedUser).subscribe({
+        next: () => {
+          console.log("New user added successfully!");
+          this.router.navigate(['/users']);
+        },
+        error: (err) => console.error("Error adding user:", err)
+      });
+    }
   }
+
+
+
 
 
 
