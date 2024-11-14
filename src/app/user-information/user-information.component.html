@@ -4,6 +4,7 @@
   <div class="person-field"><strong>Email:</strong> {{ person.email }}</div>
   <div class="person-field"><strong>Contacts:</strong> {{ person.contacts }}</div>
   <div class="person-field"><strong>Admin:</strong> {{ person.Admin ? 'Yes' : 'No' | uppercase}}</div>
+  <p>{{person | pipeBank}}</p>
   <div class="actions">
     <!-- Navigate to edit user page -->
     <button (click)="onEdit(person.id)">Edit</button>

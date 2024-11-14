@@ -5,6 +5,7 @@ import { UserInformationListComponent } from "../user-information-list/user-info
 import {Router, RouterLink} from "@angular/router";
 import {OnlineBankingService} from "../online-banking.service";
 import {login} from "../Shared/userChanges.data";
+import {PipeBankPipe} from "../pipe-bank.pipe";
 
 @Component({
   selector: 'app-user-information',
@@ -14,6 +15,7 @@ import {login} from "../Shared/userChanges.data";
     UserInformationListComponent,
     RouterLink,
     UpperCasePipe,
+    PipeBankPipe,
   ],
   templateUrl: './user-information.component.html',
   styleUrls: ['./user-information.component.css'] // Corrected 'styleUrl' to 'styleUrls'
