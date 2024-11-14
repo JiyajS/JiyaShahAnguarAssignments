@@ -3,5 +3,6 @@ export interface Operator {
   name: string;
   email: string;
   contacts: number;
+
   Admin: boolean;
 }
