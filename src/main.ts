@@ -26,6 +26,7 @@ bootstrapApplication(AppComponent, {
   providers: [
     provideHttpClient(),
     provideRouter(routes),
-    importProvidersFrom(HttpClientInMemoryWebApiModule.forRoot(InMemoryDataServiceService, {delay:1000}))
+    importProvidersFrom(HttpClientInMemoryWebApiModule.forRoot(InMemoryDataServiceService, {delay:1000
+    }))
   ],
 }).catch((err) => console.error(err))

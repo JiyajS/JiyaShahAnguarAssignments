@@ -34,7 +34,7 @@ private  apiUrl = 'api/login';
   }
 
   getUserById(id: number): Observable<Operator> {
-   return this.http.get<Operator>(`${this.apiUrl}/${'id'}`).pipe(catchError(this.handleError));
+   return this.http.get<Operator>(`${this.apiUrl}/${id}`).pipe(catchError(this.handleError));
   }
   generateNewId(): number{
     return this.users.length > 0 ? Math.max(...this.users.map(user => user.id)) + 1 : 1;
