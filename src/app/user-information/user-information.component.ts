@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForOf } from "@angular/common";
+import {NgForOf, UpperCasePipe} from "@angular/common";
 import { Operator } from "../Shared/Modules/operator";
 import { UserInformationListComponent } from "../user-information-list/user-information-list.component";
 import {Router, RouterLink} from "@angular/router";
@@ -13,6 +13,7 @@ import {login} from "../Shared/userChanges.data";
     NgForOf,
     UserInformationListComponent,
     RouterLink,
+    UpperCasePipe,
   ],
   templateUrl: './user-information.component.html',
   styleUrls: ['./user-information.component.css'] // Corrected 'styleUrl' to 'styleUrls'

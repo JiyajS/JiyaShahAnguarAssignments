@@ -1,6 +1,6 @@
 <div *ngFor="let person of login" class="person-container">
   <div class="person-field"><strong>ID:</strong> {{ person.id }}</div>
-  <div class="person-field"><strong>Name:</strong> {{ person.name }}</div>
+  <div class="person-field"><strong>Name :</strong> {{ person.name | uppercase}}</div> //used UpperCase Pipe
   <div class="person-field"><strong>Email:</strong> {{ person.email }}</div>
   <div class="person-field"><strong>Contacts:</strong> {{ person.contacts }}</div>
   <div class="person-field"><strong>Admin:</strong> {{ person.Admin ? 'Yes' : 'No' }}</div>
