@@ -6,6 +6,7 @@ import {Router, RouterLink} from "@angular/router";
 import {OnlineBankingService} from "../online-banking.service";
 import {login} from "../Shared/userChanges.data";
 import {PipeBankPipe} from "../pipe-bank.pipe";
+import {BonusPipePipe} from "../bonus-pipe.pipe";
 
 @Component({
   selector: 'app-user-information',
@@ -16,6 +17,7 @@ import {PipeBankPipe} from "../pipe-bank.pipe";
     RouterLink,
     UpperCasePipe,
     PipeBankPipe,
+    BonusPipePipe,
   ],
   templateUrl: './user-information.component.html',
   styleUrls: ['./user-information.component.css'] // Corrected 'styleUrl' to 'styleUrls'

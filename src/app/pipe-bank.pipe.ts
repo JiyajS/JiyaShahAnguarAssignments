@@ -8,7 +8,11 @@ import {Operator} from "./Shared/Modules/operator";
 export class PipeBankPipe implements PipeTransform {
 
   transform(user:Operator): string {
-    return `Use my email: ${user.email} to contact me.`;
+    if(user.Admin){
+      return `contacts: ${user.contacts}`;
+    }else {
+      return `No contact for non admin`;
+    }
   }
 
 }

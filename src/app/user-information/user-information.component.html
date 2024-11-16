@@ -2,9 +2,8 @@
   <div class="person-field"><strong>ID:</strong> {{ person.id }}</div>
   <div class="person-field"><strong>Name :</strong> {{ person.name | uppercase}}</div> <!--Used UpperCase Pipe-->
   <div class="person-field"><strong>Email:</strong> {{ person.email }}</div>
-  <div class="person-field"><strong>Contacts:</strong> {{ person.contacts }}</div>
-  <div class="person-field"><strong>Admin:</strong> {{ person.Admin ? 'Yes' : 'No' | uppercase}}</div>
-  <p>{{person | pipeBank}}</p>
+   <div class="person-field"><strong> {{ person | pipeBank }}</strong></div>
+  <div><p [style.color]="person | bonusPipe"><strong>Admin: {{person.Admin}}</strong></p></div>
   <div class="actions">
     <!-- Navigate to edit user page -->
     <button (click)="onEdit(person.id)">Edit</button>
