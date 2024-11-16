@@ -14,7 +14,7 @@ import {Router,RouterModule} from "@angular/router";
 })
 export class AppComponent implements OnInit {
   title = 'banking system';
-  date = '2024-11-14'
+  date = Date.now();
   topUser?: Operator ; // Define a variable to store the user data
 
   constructor(private onlineBanking: OnlineBankingService, private router: Router) { }
