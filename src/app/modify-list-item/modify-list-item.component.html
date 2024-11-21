@@ -1,27 +1,27 @@
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label for="id">ID</label>
-    <input type="number" id="id" formControlName="id" />
+    <input type="number" id="id" formControlName="id" [appHoverHighlight]="'red'"/>
   </div>
 
   <div class="form-group">
     <label for="name">Name</label>
-    <input type="text" id="name" formControlName="name" />
+    <input type="text" id="name" formControlName="name" [appHoverHighlight]="'red'"/>
   </div>
 
   <div class="form-group">
     <label for="email">Email</label>
-    <input type="email" id="email" formControlName="email" />
+    <input type="email" id="email" formControlName="email" [appHoverHighlight]="'red'"/>
   </div>
 
   <div class="form-group">
     <label for="contacts">Contacts</label>
-    <input type="text" id="contacts" formControlName="contacts" />
+    <input type="text" id="contacts" formControlName="contacts" [appHoverHighlight]="'red'"/>
   </div>
 
   <div class="form-group">
     <label for="isAdmin">Admin</label>
-    <input type="checkbox" id="isAdmin" formControlName="isAdmin" />
+    <input type="checkbox" id="isAdmin" formControlName="isAdmin" [appHoverHighlight]="'red'"/>
   </div>
 
   <button type="submit">Submit</button>

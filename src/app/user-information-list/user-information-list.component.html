@@ -1,4 +1,4 @@
-<div *ngIf="login" class="user-list">
+<div *ngIf="login" class="user-list" [appHoverHighlight]="'black'" >
   <h2>Operator Login Details</h2>
   <p><strong>ID:</strong> {{ login.id }}</p>
   <p><strong>First Name:</strong> {{ login.name }}</p>

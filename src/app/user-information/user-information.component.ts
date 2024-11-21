@@ -5,8 +5,9 @@ import { UserInformationListComponent } from "../user-information-list/user-info
 import {Router, RouterLink} from "@angular/router";
 import {OnlineBankingService} from "../online-banking.service";
 import {login} from "../Shared/userChanges.data";
-import {PipeBankPipe} from "../pipe-bank.pipe";
-import {BonusPipePipe} from "../bonus-pipe.pipe";
+import {PipeBankPipe} from "../pipes/pipe-bank.pipe";
+import {BonusPipePipe} from "../pipes/bonus-pipe.pipe";
+import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 
 @Component({
   selector: 'app-user-information',
@@ -18,6 +19,7 @@ import {BonusPipePipe} from "../bonus-pipe.pipe";
     UpperCasePipe,
     PipeBankPipe,
     BonusPipePipe,
+    HoverHighlightDirective,
   ],
   templateUrl: './user-information.component.html',
   styleUrls: ['./user-information.component.css'] // Corrected 'styleUrl' to 'styleUrls'

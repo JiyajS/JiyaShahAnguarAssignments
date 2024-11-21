@@ -4,11 +4,13 @@ import { OnlineBankingService } from "../online-banking.service";
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
 import { NgIf } from "@angular/common";
+import {HighlightOnFocusDirective} from "../directives/highlight-on-focus.directive";
+import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 
 @Component({
   selector: 'app-modify-list-item',
   standalone: true,
-  imports: [NgIf, FormsModule, ReactiveFormsModule],
+  imports: [NgIf, FormsModule, ReactiveFormsModule, HighlightOnFocusDirective, HoverHighlightDirective],
   templateUrl: './modify-list-item.component.html',
   styleUrls: ['./modify-list-item.component.css']
 })

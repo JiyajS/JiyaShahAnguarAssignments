@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {Operator} from "./Shared/Modules/operator";
+import {Operator} from "../Shared/Modules/operator";
 
 @Pipe({
   name: 'pipeBank',
