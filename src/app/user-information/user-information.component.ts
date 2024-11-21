@@ -3,11 +3,12 @@ import {NgForOf, UpperCasePipe} from "@angular/common";
 import { Operator } from "../Shared/Modules/operator";
 import { UserInformationListComponent } from "../user-information-list/user-information-list.component";
 import {Router, RouterLink} from "@angular/router";
-import {OnlineBankingService} from "../online-banking.service";
+import {OnlineBankingService} from "../services/online-banking.service";
 import {login} from "../Shared/userChanges.data";
 import {PipeBankPipe} from "../pipes/pipe-bank.pipe";
 import {BonusPipePipe} from "../pipes/bonus-pipe.pipe";
 import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
+import {ShowDetailsOnHoverDirective} from "../directives/show-details-on-hover.directive";
 
 @Component({
   selector: 'app-user-information',
@@ -20,6 +21,7 @@ import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
     PipeBankPipe,
     BonusPipePipe,
     HoverHighlightDirective,
+    ShowDetailsOnHoverDirective,
   ],
   templateUrl: './user-information.component.html',
   styleUrls: ['./user-information.component.css'] // Corrected 'styleUrl' to 'styleUrls'

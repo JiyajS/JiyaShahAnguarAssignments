@@ -6,7 +6,7 @@
   <div><p [style.color]="person | bonusPipe"><strong>Admin: {{person.Admin}}</strong></p></div>
   <div class="actions">
     <!-- Navigate to edit user page -->
-    <button (click)="onEdit(person.id)">Edit</button>
+    <button (click)="onEdit(person.id)" >Edit</button>
     <!-- Delete user -->
     <button (click)="onDelete(person.id)">Delete</button>
   </div>

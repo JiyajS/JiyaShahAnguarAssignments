@@ -6,7 +6,7 @@ import {PageNotFoundComponent} from "./app/page-not-found/page-not-found.compone
 import {ModifyListItemComponent} from "./app/modify-list-item/modify-list-item.component";
 import {UserInformationListComponent} from "./app/user-information-list/user-information-list.component";
 import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
-import {InMemoryDataServiceService} from "./app/in-memory-data-service.service";
+import {InMemoryDataServiceService} from "./app/services/in-memory-data-service.service";
 import {provideHttpClient} from "@angular/common/http";
 import {importProvidersFrom} from "@angular/core";
 import {delay} from "rxjs";

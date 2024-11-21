@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Operator } from "../Shared/Modules/operator";
-import { OnlineBankingService } from "../online-banking.service";
+import { OnlineBankingService } from "../services/online-banking.service";
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
 import { NgIf } from "@angular/common";
@@ -42,6 +42,7 @@ export class ModifyListItemComponent implements OnInit {
     if (id) {
       this.userService.getUserById(+id).subscribe(user => {
         if (user) {
+          // @ts-ignore
           this.user = user;
           this.userForm.patchValue(user); // Patch the form directly
         }

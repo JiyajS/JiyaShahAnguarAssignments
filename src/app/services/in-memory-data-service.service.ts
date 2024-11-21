@@ -1,5 +1,5 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import {Operator} from "./Shared/Modules/operator";
+import {Operator} from "../Shared/Modules/operator";
 
 export class InMemoryDataServiceService implements InMemoryDbService {
   //returns an object with a students property,
