@@ -1,7 +1,7 @@
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label for="id">ID</label>
-    <input type="number" id="id" formControlName="id"  [appHoverHighlight]="'red'"/>
+    <input type="number" id="id" formControlName="id" appHighlightOnFocus [appHoverHighlight]="'red'"/>
   </div>
 
   <div class="form-group">
