@@ -10,7 +10,7 @@ import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 @Component({
   selector: 'app-modify-list-item',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, HoverHighlightDirective],
+  imports: [FormsModule, ReactiveFormsModule, HoverHighlightDirective, HighlightOnFocusDirective],
   templateUrl: './modify-list-item.component.html',
   styleUrls: ['./modify-list-item.component.css']
 })
