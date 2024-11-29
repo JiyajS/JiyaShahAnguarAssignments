@@ -1,12 +1,12 @@
-<h1>{{ title | titlecase}}</h1> <!--Used TitleCase pipe-->
-<h3>Created on: {{date | date}}</h3>
+<h1>{{ title | titlecase }}</h1> <!-- Used TitleCase pipe -->
+<h3>Created on: {{ date | date }}</h3>
+
 <div class="nav-bar">
   <nav>
-
-  <a routerLink="/users" routerLinkActive="active">User List</a>
-    <a routerLink="modifyListItem" routerLinkActive="active">Modify User</a>
+    <a mat-raised-button color="primary" routerLink="/users" routerLinkActive="active">User List</a>
+    <a mat-raised-button color="accent" routerLink="modifyListItem" routerLinkActive="active">Modify User</a>
   </nav>
-
-  <!-- Router Outlet to Load Components -->
-  <router-outlet></router-outlet>
 </div>
+
+<!-- Router Outlet to Load Components -->
+<router-outlet></router-outlet>

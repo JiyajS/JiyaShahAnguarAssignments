@@ -1,29 +1,143 @@
-<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
-  <div class="form-group">
-    <label for="id">ID</label>
-    <input type="number" id="id" formControlName="id" appHighlightOnFocus [appHoverHighlight]="'red'"/>
-  </div>
+<!--<form [formGroup]="userForm" (ngSubmit)="onSubmit()">-->
+<!--  <div class="form-group">-->
+<!--    <label for="id">ID</label>-->
+<!--    <input type="number" id="id" formControlName="id" appHighlightOnFocus [appHoverHighlight]="'red'"/>-->
+<!--  </div>-->
 
-  <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" id="name" formControlName="name" [appHoverHighlight]="'red'"/>
-  </div>
+<!--  <div class="form-group">-->
+<!--    <label for="name">Name</label>-->
+<!--    <input type="text" id="name" formControlName="name" [appHoverHighlight]="'red'"/>-->
+<!--  </div>-->
 
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="email" id="email" formControlName="email" [appHoverHighlight]="'red'"/>
-  </div>
+<!--  <div class="form-group">-->
+<!--    <label for="email">Email</label>-->
+<!--    <input type="email" id="email" formControlName="email" [appHoverHighlight]="'red'"/>-->
+<!--  </div>-->
 
-  <div class="form-group">
-    <label for="contacts">Contacts</label>
-    <input type="text" id="contacts" formControlName="contacts" [appHoverHighlight]="'red'"/>
-  </div>
+<!--  <div class="form-group">-->
+<!--    <label for="contacts">Contacts</label>-->
+<!--    <input type="text" id="contacts" formControlName="contacts" [appHoverHighlight]="'red'"/>-->
+<!--  </div>-->
 
-  <div class="form-group">
-    <label for="isAdmin">Admin</label>
-    <input type="checkbox" id="isAdmin" formControlName="isAdmin" />
-  </div>
+<!--  <div class="form-group">-->
+<!--    <label for="isAdmin">Admin</label>-->
+<!--    <input type="checkbox" id="isAdmin" formControlName="isAdmin" />-->
+<!--  </div>-->
 
-  <button type="submit">Submit</button>
-  <button type="button" (click)="navigateToUserList()">Back to List</button>
+<!--  <button type="submit">Submit</button>-->
+<!--  <button type="button" (click)="navigateToUserList()">Back to List</button>-->
+<!--</form>-->
+
+<!--<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="example-form">-->
+<!--  &lt;!&ndash; ID Input Field with Tooltip beside &ndash;&gt;-->
+<!--  <mat-form-field class="example-full-width">-->
+<!--    <mat-label>ID</mat-label>-->
+<!--    <input matInput type="number" id="id" formControlName="id" [appHoverHighlight]="'red'" matTooltip="Enter a unique ID" matTooltipPosition="before" />-->
+<!--  </mat-form-field>-->
+<!--  <br>-->
+
+<!--  &lt;!&ndash; Name Input Field with Tooltip beside &ndash;&gt;-->
+<!--  <mat-form-field class="example-full-width">-->
+<!--    <mat-label>Name</mat-label>-->
+<!--    <input matInput type="text" id="name" formControlName="name" [appHoverHighlight]="'red'" matTooltip="Enter your full name" matTooltipPosition="after" />-->
+<!--  </mat-form-field>-->
+<!--  <br>-->
+
+<!--  &lt;!&ndash; Email Input Field with Tooltip beside &ndash;&gt;-->
+<!--  <mat-form-field class="example-full-width">-->
+<!--    <mat-label>Email</mat-label>-->
+<!--    <input matInput type="email" id="email" formControlName="email" [appHoverHighlight]="'red'" matTooltip="Enter a valid email address" matTooltipPosition="before" />-->
+<!--  </mat-form-field>-->
+<!--  <br>-->
+
+<!--  &lt;!&ndash; Contacts Input Field with Tooltip beside &ndash;&gt;-->
+<!--  <mat-form-field class="example-full-width">-->
+<!--    <mat-label>Contacts</mat-label>-->
+<!--    <input matInput type="text" id="contacts" formControlName="contacts" [appHoverHighlight]="'red'" matTooltip="Enter contact details" matTooltipPosition="before" />-->
+<!--  </mat-form-field>-->
+<!--  <br>-->
+
+<!--  &lt;!&ndash; Admin Checkbox with Tooltip beside &ndash;&gt;-->
+<!--  <mat-checkbox formControlName="isAdmin" matTooltip="Check if the user is an admin" matTooltipPosition="before" class="checkbox-label">Admin</mat-checkbox>-->
+<!--  <br>-->
+
+<!--  &lt;!&ndash; Submit and Back Buttons &ndash;&gt;-->
+<!--  <div class="form-buttons">-->
+<!--    <button mat-raised-button color="primary" type="submit">Submit</button>-->
+<!--    <button mat-raised-button color="warn" type="button" (click)="navigateToUserList()">Back to List</button>-->
+<!--  </div>-->
+<!--</form>-->
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="example-form">
+  <!-- ID Input Field -->
+  <mat-form-field class="example-full-width">
+    <mat-label>ID</mat-label>
+    <input
+      matInput
+      type="number"
+      id="id"
+      formControlName="id"
+      matTooltip="Enter a unique ID"
+      matTooltipPosition="right"
+      appHighlightOnFocus
+      [appHoverHighlight]="'red'"
+    />
+  </mat-form-field>
+  <br />
+
+  <!-- Name Input Field -->
+  <mat-form-field class="example-full-width">
+    <mat-label>Name</mat-label>
+    <input
+      matInput
+      type="text"
+      id="name"
+      formControlName="name"
+      matTooltip="Enter the user's full name"
+      matTooltipPosition="right"
+      [appHoverHighlight]="'red'"
+    />
+  </mat-form-field>
+  <br />
+
+  <!-- Email Input Field -->
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input
+      matInput
+      type="email"
+      id="email"
+      formControlName="email"
+      matTooltip="Provide a valid email address"
+      matTooltipPosition="right"
+      [appHoverHighlight]="'red'"
+    />
+  </mat-form-field>
+  <br />
+
+  <!-- Contacts Input Field -->
+  <mat-form-field class="example-full-width">
+    <mat-label>Contacts</mat-label>
+    <input
+      matInput
+      type="text"
+      id="contacts"
+      formControlName="contacts"
+      matTooltip="Provide the user's contact details"
+      matTooltipPosition="left"
+      [appHoverHighlight]="'red'"
+    />
+  </mat-form-field>
+  <br />
+
+  <!-- Admin Checkbox -->
+  <mat-checkbox formControlName="isAdmin" matTooltip="Check if the user is an admin" matTooltipPosition="right">
+    Admin
+  </mat-checkbox>
+
+  <!-- Buttons -->
+  <div class="form-buttons">
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+    <button mat-raised-button color="warn" type="button" (click)="navigateToUserList()">Back to List</button>
+  </div>
 </form>

@@ -6,11 +6,16 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { NgIf } from "@angular/common";
 import {HighlightOnFocusDirective} from "../directives/highlight-on-focus.directive";
 import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
+import {MatInputModule} from "@angular/material/input";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatButtonModule} from "@angular/material/button";
+import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @Component({
   selector: 'app-modify-list-item',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, HoverHighlightDirective, HighlightOnFocusDirective],
+  imports: [FormsModule, ReactiveFormsModule, HoverHighlightDirective, HighlightOnFocusDirective, MatInputModule, MatCheckboxModule, MatButtonModule, MatAutocompleteModule, MatTooltipModule],
   templateUrl: './modify-list-item.component.html',
   styleUrls: ['./modify-list-item.component.css']
 })

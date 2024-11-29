@@ -9,6 +9,7 @@ import {PipeBankPipe} from "../pipes/pipe-bank.pipe";
 import {BonusPipePipe} from "../pipes/bonus-pipe.pipe";
 import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 import {ShowDetailsOnHoverDirective} from "../directives/show-details-on-hover.directive";
+import {MatCardModule} from "@angular/material/card";
 
 @Component({
   selector: 'app-user-information',
@@ -22,6 +23,7 @@ import {ShowDetailsOnHoverDirective} from "../directives/show-details-on-hover.d
     BonusPipePipe,
     HoverHighlightDirective,
     ShowDetailsOnHoverDirective,
+    MatCardModule,
   ],
   templateUrl: './user-information.component.html',
   styleUrls: ['./user-information.component.css'] // Corrected 'styleUrl' to 'styleUrls'

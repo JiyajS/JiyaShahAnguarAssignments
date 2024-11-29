@@ -1,13 +1,38 @@
-<div *ngFor="let person of login" class="person-container"  [appHoverHighlight]="'teal'" >
-  <div class="person-field"><strong>ID:</strong> {{ person.id }}</div>
-  <div class="person-field"><strong>Name :</strong> {{ person.name | uppercase}}</div> <!--Used UpperCase Pipe-->
-  <div class="person-field"><strong>Email:</strong> {{ person.email }}</div>
-   <div class="person-field"><strong> {{ person | pipeBank }}</strong></div>
-  <div><p [style.color]="person | bonusPipe"><strong>Admin: {{person.Admin}}</strong></p></div>
-  <div class="actions">
-    <!-- Navigate to edit user page -->
-    <button (click)="onEdit(person.id)" >Edit</button>
-    <!-- Delete user -->
-    <button (click)="onDelete(person.id)">Delete</button>
-  </div>
+<!--<div *ngFor="let person of login" class="person-container"  [appHoverHighlight]="'teal'" >-->
+<!--  <div class="person-field"><strong>ID:</strong> {{ person.id }}</div>-->
+<!--  <div class="person-field"><strong>Name :</strong> {{ person.name | uppercase}}</div> &lt;!&ndash;Used UpperCase Pipe&ndash;&gt;-->
+<!--  <div class="person-field"><strong>Email:</strong> {{ person.email }}</div>-->
+<!--   <div class="person-field"><strong> {{ person | pipeBank }}</strong></div>-->
+<!--  <div><p [style.color]="person | bonusPipe"><strong>Admin: {{person.Admin}}</strong></p></div>-->
+<!--  <div class="actions">-->
+<!--    &lt;!&ndash; Navigate to edit user page &ndash;&gt;-->
+<!--    <button (click)="onEdit(person.id)" >Edit</button>-->
+<!--    &lt;!&ndash; Delete user &ndash;&gt;-->
+<!--    <button (click)="onDelete(person.id)">Delete</button>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div *ngFor="let person of login" class="person-container" [appHoverHighlight]="'teal'">
+  <mat-card class="example-card" appearance="outlined">
+<!--    <mat-card-header>-->
+<!--      <div mat-card-avatar class="example-header-image"></div>-->
+<!--      <mat-card-title>{{ person.name | uppercase }}</mat-card-title>-->
+<!--      <mat-card-subtitle>{{ person.email }}</mat-card-subtitle>-->
+<!--    </mat-card-header>-->
+
+    <mat-card-content>
+      <div class="person-field"><strong>ID:</strong> {{ person.id }}</div>
+      <div class="person-field"><strong>Name :</strong> {{ person.name | uppercase}}</div>
+      <div class="person-field"><strong>Email:</strong> {{ person.email }}</div>
+      <div class="person-field"><strong>{{ person | pipeBank }}</strong></div>
+      <div><p [style.color]="person | bonusPipe"><strong>Admin: {{person.Admin}}</strong></p></div>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <!-- Navigate to edit user page -->
+      <button mat-button (click)="onEdit(person.id)">Edit</button>
+      <!-- Delete user -->
+      <button mat-button (click)="onDelete(person.id)">Delete</button>
+    </mat-card-actions>
+  </mat-card>
 </div>

@@ -5,10 +5,11 @@ import { UserInformationComponent } from "./user-information/user-information.co
 import { OnlineBankingService } from "./services/online-banking.service";
 import { Operator } from './Shared/Modules/operator';
 import {Router,RouterModule} from "@angular/router";
+import {MatButtonModule} from "@angular/material/button";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, JsonPipe, NgForOf, UserInformationComponent, RouterLinkActive, RouterModule, TitleCasePipe, DatePipe],
+  imports: [RouterOutlet, JsonPipe, NgForOf, UserInformationComponent, RouterLinkActive, RouterModule, TitleCasePipe, DatePipe, MatButtonModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

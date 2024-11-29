@@ -62,3 +62,53 @@ router-outlet {
 h3{
   text-align: center;
 }
+
+/* Styling for the navigation bar */
+.nav-bar {
+  display: flex;
+  justify-content: center; /* Center-align navigation */
+  align-items: center;
+  padding: 16px; /* Add spacing inside the bar */
+  background-color: #f5f5f5; /* Light grey background for contrast */
+  border-bottom: 2px solid #ddd; /* Subtle border for separation */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+/* Navigation container */
+.nav-bar nav {
+  display: flex;
+  gap: 16px; /* Add spacing between buttons */
+}
+
+/* Styling for Material raised buttons */
+a[mat-raised-button] {
+  text-transform: uppercase; /* Ensure text is uppercase for emphasis */
+  font-weight: bold; /* Bold text for better visibility */
+  padding: 8px 16px; /* Comfortable padding */
+  border-radius: 4px; /* Rounded corners for modern look */
+}
+
+/* Active link styling */
+a[mat-raised-button].active {
+  box-shadow: 0 4px 10px rgba(25, 118, 210, 0.4); /* Highlight active link with shadow */
+  border: 2px solid #1976d2; /* Highlight active link with border */
+}
+
+/* Hover effect */
+a[mat-raised-button]:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Subtle background change on hover */
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 600px) {
+  .nav-bar nav {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+  }
+
+  a[mat-raised-button] {
+    width: 100%; /* Full-width buttons for smaller screens */
+    text-align: center; /* Center text inside buttons */
+  }
+}
+

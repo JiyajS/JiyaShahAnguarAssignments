@@ -31,3 +31,41 @@ button:last-of-type {
     margin-bottom: 5px;
   }
 }
+
+.person-container {
+  margin-bottom: 20px; /* Space between person cards */
+}
+
+.example-card {
+  padding: 15px;
+  width: 100%;
+  max-width: 600px;
+  margin: 10px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mat-card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mat-card-subtitle {
+  font-size: 14px;
+  color: #555;
+}
+
+.person-field {
+  margin-bottom: 8px;
+}
+
+.mat-card-actions {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  gap: 10px; /* Optional: Adds space between buttons */
+}
+
+button {
+  margin-right: 10px; /* Space between buttons */
+
+}
+
