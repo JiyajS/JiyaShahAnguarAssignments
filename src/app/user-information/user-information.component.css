@@ -64,8 +64,9 @@ button:last-of-type {
   gap: 10px; /* Optional: Adds space between buttons */
 }
 
-button {
-  margin-right: 10px; /* Space between buttons */
+.mat-button {
+  margin-right: 10px;
+  color: #007bff/* Space between buttons */
 
 }
 
