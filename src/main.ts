@@ -8,8 +8,9 @@ import {UserInformationListComponent} from "./app/user-information-list/user-inf
 import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
 import {InMemoryDataServiceService} from "./app/services/in-memory-data-service.service";
 import {provideHttpClient} from "@angular/common/http";
-import {importProvidersFrom} from "@angular/core";
+import {importProvidersFrom, isDevMode} from "@angular/core";
 import {delay} from "rxjs";
+import { provideServiceWorker } from '@angular/service-worker';
 
 
 const routes: Routes = [
@@ -29,6 +30,9 @@ bootstrapApplication(AppComponent, {
     provideHttpClient(),
     provideRouter(routes),
     importProvidersFrom(HttpClientInMemoryWebApiModule.forRoot(InMemoryDataServiceService, {delay:1000
-    }))
+    })), provideServiceWorker('ngsw-worker.js', {
+            enabled: !isDevMode(),
+            registrationStrategy: 'registerWhenStable:30000'
+          })
   ],
 }).catch((err) => console.error(err))
